@@ -1,0 +1,8 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/12-marketplace": "pages/12-marketplace.js",
+  "/10-online-course": "pages/10-online-course.js"
+}
