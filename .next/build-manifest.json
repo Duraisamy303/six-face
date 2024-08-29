@@ -17,10 +17,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/12-marketplace": [
+    "/08-language-academy": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/12-marketplace.js"
+      "static/chunks/pages/08-language-academy.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

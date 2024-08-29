@@ -18,14 +18,14 @@ const HeaderStyleThree = ({ headerSticky }) => {
           gapSpaceBetween="header-space-betwween"
           container="container-fluid"
         /> */}
-        
+
         <HeaderMidOne
           container="container-fluid"
           gapSpaceBetween="header-space-betwween"
           bgColor="bg-color-white rbt-border-bottom"
         />
 
-{/* <div className="rbt-header-middle position-relative rbt-header-mid-1 bg-color-white rbt-border-bottom">
+        {/* <div className="rbt-header-middle position-relative rbt-header-mid-1 bg-color-white rbt-border-bottom">
           <HeaderTopMidThree flexDirection="" />
         </div> */}
         {/* NavBar */}

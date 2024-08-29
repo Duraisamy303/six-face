@@ -10,6 +10,7 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import HeaderStyleThree from "@/components/Header/HeaderStyle-Three";
 import OnlineCourse from "@/components/10-online-course/OnlineCourse";
 import FooterThree from "@/components/Footer/Footer-Three";
+import LanguageAcademy from "@/components/08-language-academy/LanguageAcademy";
 
 const OnlineCoursePage = () => {
   return (
@@ -22,9 +23,10 @@ const OnlineCoursePage = () => {
             headerType="rbt-transparent-header"
             headerSticky="rbt-sticky"
           />
-          <Cart />
+          {/* <Cart /> */}
 
-          <OnlineCourse />
+          {/* <OnlineCourse /> */}
+          <LanguageAcademy />
 
           <BackToTop />
           <FooterThree />
