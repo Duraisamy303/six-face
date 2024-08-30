@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/08-language-academy": "pages/08-language-academy.js",
-  "/05-classic-lms": "pages/05-classic-lms.js",
+  "/06-university-status": "pages/06-university-status.js",
+  "/12-marketplace": "pages/12-marketplace.js",
   "/": "pages/index.js"
 }
