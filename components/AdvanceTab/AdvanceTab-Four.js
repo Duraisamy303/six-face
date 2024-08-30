@@ -10,12 +10,12 @@ const AdvanceTabFour = ({ head }) => {
       {TabData &&
         TabData.advanceFour.map((data, index) => (
           <div className="container" key={index}>
-            {head === undefined ? (
+            {/* {head === undefined ? (
               <SectionHead tag={data.tag} title={data.title} />
             ) : (
               ""
-            )}
-            <div className="row g-5">
+            )} */}
+            {/* <div className="row g-5">
               <div className="col-lg-10 offset-lg-1">
                 <div className="advance-tab-button">
                   <ul
@@ -63,11 +63,11 @@ const AdvanceTabFour = ({ head }) => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {data.gallery.map((value, subIndex) => (
-              <div className="row g-5 mt--40" key={subIndex}>
-                <div className="col-lg-6">
+              <div className="row g-5 " key={subIndex}>
+                {/* <div className="col-lg-6">
                   <div className="rbt-category-gallery">
                     <div className="thumbnail">
                       <Link href="#">
@@ -84,8 +84,8 @@ const AdvanceTabFour = ({ head }) => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-6">
+                </div> */}
+                <div className="col-lg-12">
                   <div className="row g-5">
                     {value.subGallery.map((subValue, subInnerIndex) => (
                       <div

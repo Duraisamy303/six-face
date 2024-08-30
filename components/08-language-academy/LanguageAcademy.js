@@ -5,18 +5,28 @@ import sal from "sal.js";
 
 import BlogData from "../../data/blog/blog.json";
 import CourseDetails from "../../data/course-details/courseData.json";
+import Separator from "@/components/Common/Separator";
 
 import client1 from "../../public/images/testimonial/client-04.png";
 import client2 from "../../public/images/testimonial/client-05.png";
 import client3 from "../../public/images/testimonial/client-06.png";
 import client4 from "../../public/images/testimonial/client-12.png";
 import languageClub from "../../public/images/banner/language-club.png";
+import SingleCourseData from "../../data/pages/11-singleCourse.json";
 
 import CategoryFour from "../Category/CategoryFour";
 import Counter from "../Counters/Counter";
 import AboutTwo from "../Abouts/About-Two";
 import CountDownTwo from "../Counters/CountDownTwo";
 import { ParallaxProvider } from "react-scroll-parallax";
+import Card from "../Cards/Card";
+import BrandThree from "../Brand/Brand-Three";
+import BrandTwo from "../Brand/Brand-Two";
+import CategoryOne from "../Category/CategoryOne";
+import CallToActionSix from "../Call-To-Action/CallToAction-Six";
+import AdvanceTabFour from "../AdvanceTab/AdvanceTab-Four";
+import BlogGridTop from "../Blogs/Blog-Sections/BlogGrid-Top";
+import SingleCourseProp from "../11-single-course/SingleCourseProp";
 
 const LanguageAcademy = () => {
   let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.languageAcademy));
@@ -37,14 +47,17 @@ const LanguageAcademy = () => {
                   <div className="inner">
                     <div className="section-title text-start">
                       <span className="subtitle bg-primary-opacity">
-                        EDUCATION FOR EVERYONE
+                        MORBI CONSEQUAT
                       </span>
                     </div>
-                    <h1 className="title">
-                      Innovative
-                      <span className="theme-gradient">Language Academic</span>
-                      Platform for Your Career.
-                    </h1>
+                    <h3 className="title">
+                      Unleash Your
+                      <br />
+                      <span className="theme-gradient">Curiosity ,</span>
+                      Unleash
+                      <br />
+                      <span> Your Potential</span>
+                    </h3>
                     <div className="rbt-like-total">
                       <div className="profile-share">
                         <Link
@@ -114,40 +127,15 @@ const LanguageAcademy = () => {
                 </div>
               </div>
               <div className="col-lg-6 order-1 order-lg-2">
-                <div className="thumbnail-wrapper">
-                  <div className="thumbnail text-end">
-                    <Image
-                      src={languageClub}
-                      width={597}
-                      height={479}
-                      alt="Education Images"
-                    />
-                  </div>
-                  <div className="card-info bounce-slide">
-                    <div className="inner">
-                      <div className="name">
-                        Hillery. <span>/ USA</span>
-                      </div>
-                      <div className="rating-wrapper d-block d-sm-flex">
-                        <div className="rating">
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                          <i className="fas fa-star"></i>
-                        </div>
-                        <span>(Google Review)</span>
-                      </div>
-                    </div>
-                    <div className="notify-icon">
-                      <Image
-                        src={client4}
-                        width={100}
-                        height={100}
-                        alt="Client Images"
-                      />
-                    </div>
-                  </div>
+                <div className="row g-5">
+                  <Card
+                    col="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
+                    mt=""
+                    start={0}
+                    end={2}
+                    isDesc={false}
+                    isUser={false}
+                  />
                 </div>
               </div>
             </div>
@@ -155,111 +143,40 @@ const LanguageAcademy = () => {
         </div>
       </div>
 
-      <div className="rbt-categories-area bg-color-extra2 rbt-section-gap">
+      {/* <div className="rbt-categories-area bg-color-extra2 rbt-section-gap">
         <div className="container">
           <div className="row g-5">
             <CategoryFour />
           </div>
         </div>
-      </div>
-
-      <div className="rbt-course-card-area rbt-section-gap bg-color-white">
+      </div> */}
+      <div className="rbt-brand-area bg-color-white ptb--60">
         <div className="container">
-          <div className="row align-items-center mb--60">
-            <div className="col-lg-12">
-              <div className="section-title text-center">
-                <span className="subtitle bg-pink-opacity">
-                  Our Language Courses
-                </span>
-                <h2 className="title">Language Courses</h2>
-                <p className="description has-medium-font-size mt--20">
-                  Language Academy Courses?
-                </p>
-              </div>
+          <div className="row align-items-center">
+            <div className="col-lg-10 offset-lg-1">
+              <BrandThree />
             </div>
           </div>
-          <div className="row g-5">
-            {CourseDetails &&
-              getAllCourse.map((data, index) => (
-                <div
-                  className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
-                  data-sal-delay="150"
-                  data-sal="slide-up"
-                  data-sal-duration="800"
-                  key={index}
-                >
-                  <div className={`rbt-card variation-03 rbt-hover`}>
-                    <div className="rbt-card-img">
-                      <Link
-                        className="thumbnail-link"
-                        href={`/course-details/${data.id}`}
-                      >
-                        <Image
-                          src={data.courseImg}
-                          width={355}
-                          height={244}
-                          alt="Card image"
-                        />{" "}
-                        <span className="rbt-btn btn-white icon-hover btn-md">
-                          <span className="btn-text">Read More</span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right"></i>
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                    <div className="rbt-card-body">
-                      <h4 className="rbt-card-title">
-                        <Link href={`/course-details/${data.id}`}>
-                          {data.courseTitle}
-                        </Link>
-                      </h4>
+        </div>
+      </div>
+      <Separator />
 
-                      <div className="rbt-card-bottom">
-                        <Link
-                          className="transparent-button"
-                          href={`/course-details/${data.id}`}
-                        >
-                          <svg
-                            width="17"
-                            height="12"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g stroke="#27374D" fill="none" fillRule="evenodd">
-                              <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
-                              <path
-                                strokeLinecap="square"
-                                d="M.663 5.572h14.594"
-                              ></path>
-                            </g>
-                          </svg>
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="card-information">
-                      <div className="card-flag">
-                        <Image
-                          src={data.countryFlag}
-                          width={21}
-                          height={21}
-                          alt="united-kingdom"
-                        />
-                      </div>
-                      <div className="card-count">{data.lesson} programs</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+      <div className="rbt-brand-area bg-color-white ptb--60">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-10 offset-lg-1">
+              <BrandThree />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="rbt-counterup-area rbt-section-gapBottom bg-gradient-1">
+      <div className="rbt-counterup-area rbt-section-gapBottom bg-gradient-5  ">
         <div className="container">
-          <div className="row mb--60">
+          <div className="row mb--60 ">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <span className="subtitle bg-primary-opacity">
+                <span className="subtitle bg-primary-opacity mt--60">
                   Why Choose Us
                 </span>
                 <h2 className="title">Why Choose Histudy</h2>
@@ -273,93 +190,89 @@ const LanguageAcademy = () => {
         </div>
       </div>
 
-      <div className="rbt-about-area about-style-1 rbt-section-gapTop pb--30 pb_md--80 pb_sm--80 bg-color-white">
+      <div className="rbt-counterup-area rbt-section-gapBottom  ">
         <div className="container">
-          <ParallaxProvider>
-            <AboutTwo />
-          </ParallaxProvider>
-        </div>
-      </div>
-
-      <div
-        className="rbt-countdown-area bg_image bg_image--6 bg_image_fixed rbt-section-gap"
-        data-black-overlay="5"
-      >
-        <div className="container">
-          <CountDownTwo />
-        </div>
-      </div>
-
-      <div className="rbt-rbt-blog-area rbt-section-gap bg-gradient-1">
-        <div className="container">
-          <div className="row mb--55 row--30 align-items-end">
+          <div className="row mb--60 ">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <span className="subtitle bg-pink-opacity">Our Posts</span>
-                <h2 className="title">Histudy News</h2>
-                <p className="description has-medium-font-size mt--20">
-                  Language Academy Blog.
+                <span className="subtitle bg-primary-opacity mt--60">
+                  Why Choose Us
+                </span>
+                <h2 className="title">Our Brands</h2>
+                <p className="description has-medium-font-size mt--20 mb--0">
+                  Language Academic?
                 </p>
               </div>
             </div>
           </div>
-          <div className="row g-5">
-            {BlogData &&
-              BlogData.blogGrid.slice(0, 3).map((data, index) => (
-                <div className="col-lg-4 col-md-6 col-sm-12 col-12" key={index}>
-                  <div className="rbt-card variation-02 rbt-hover">
-                    <div className="rbt-card-img">
-                      <Link href={`/blog-details/${data.id}`}>
-                        <Image
-                          src={data.img}
-                          width={450}
-                          height={267}
-                          priority
-                          alt="Card image"
-                        />
-                      </Link>
-                    </div>
-                    <div className="rbt-card-body">
-                      <h5 className="rbt-card-title">
-                        <Link href={`/blog-details/${data.id}`}>
-                          {data.title}
-                        </Link>
-                      </h5>
-                      <p className="rbt-card-text">{data?.desc}</p>
-                      <div className="rbt-card-bottom">
-                        <Link
-                          className="transparent-button"
-                          href={`/blog-details/${data.id}`}
-                        >
-                          Learn More
-                          <i>
-                            <svg
-                              width="17"
-                              height="12"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <g
-                                stroke="#27374D"
-                                fill="none"
-                                fillRule="evenodd"
-                              >
-                                <path d="M10.614 0l5.629 5.629-5.63 5.629" />
-                                <path
-                                  strokeLinecap="square"
-                                  d="M.663 5.572h14.594"
-                                />
-                              </g>
-                            </svg>
-                          </i>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          <div className="row  mt--30 rbt-brand-area bg-color-white ">
+            <CategoryOne />
           </div>
         </div>
       </div>
+
+      <div className="rbt-course-banner-area  bg-color-darker">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="inner">
+                <div className="section-title text-center">
+                  <span className="subtitle bg-primary-opacity mt--60">
+                    Why Choose Us
+                  </span>
+                  <h2 className="title">Our Brands</h2>
+                  <p className="description has-medium-font-size mt--20 mb--0">
+                    Language Academic?
+                  </p>
+                  <Link
+                    className="rbt-btn hover-icon-reverse btn-border color-white-off mt--30 mb--30"
+                    href="#"
+                  >
+                    <span className="icon-reverse-wrapper">
+                      <span className="btn-text">Hired List</span>
+                      <span className="btn-icon">
+                        <i className="feather-arrow-right"></i>
+                      </span>
+                      <span className="btn-icon">
+                        <i className="feather-arrow-right"></i>
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+
+                <div className="row g-5">
+                  <SingleCourseProp
+                    courseData={SingleCourseData.certificate}
+                    image={true}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="container">
+          <div className="row mt--60">
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <span className="subtitle bg-primary-opacity">
+                  Why Choose Us
+                </span>
+                <h2 className="title">2500+ Companies</h2>
+                <p className="description has-medium-font-size mt--20 mb--0">
+                  Language Academic?
+                </p>
+              </div>
+            </div>
+          </div>
+          <BrandTwo />
+        </div>
+      </div>
+
+        <div className="rbt-call-to-action-area  bg-gradient-8 rbt-section-gap-own">
+          <CallToActionSix />
+        </div>
     </>
   );
 };

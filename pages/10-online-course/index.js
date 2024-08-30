@@ -29,7 +29,7 @@ const OnlineCoursePage = () => {
           <LanguageAcademy />
 
           <BackToTop />
-          <FooterThree />
+          {/* <FooterThree /> */}
         </Context>
       </Provider>
     </>

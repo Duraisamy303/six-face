@@ -22,7 +22,7 @@ const Home = () => {
           {/* <HeaderStyleTen headerSticky="rbt-sticky" headerType="" /> */}
           {/* <MainDemo /> */}
           <OnlineCoursePage />
-          <Cart />
+          {/* <Cart /> */}
 
           <Separator />
           <FooterThree />
