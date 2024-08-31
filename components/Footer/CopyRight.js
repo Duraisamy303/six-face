@@ -12,9 +12,9 @@ const CopyRight = () => {
               <p className="rbt-link-hover text-center text-lg-start">
                 Copyright © 2024{" "}
                 <Link href="https://themeforest.net/user/rbt-themes">
-                  Rainbow-Themes.
+                  Talently.
                 </Link>{" "}
-                All Rights Reserved
+               Concept by Repute
               </p>
             </div>
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
