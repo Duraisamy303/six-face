@@ -68,11 +68,11 @@ export default function SingleCourseProp({ courseData, image, data }) {
       <div className="col-lg-6">
         <div className="modern-course-features-box-new grid-content-reverse ">
           <div className="inner">
-            <div className="thumbnail">
+            <div className="h-20 w-full radius-20 thumbnail">
               <Image
                 src={data?.container3?.img}
-                width={308}
-                height={197}
+                width={"100%"}
+                height={"100%"}
                 alt="Image"
               />
             </div>
@@ -80,7 +80,7 @@ export default function SingleCourseProp({ courseData, image, data }) {
             <div className="content">
               <h2 className="title">{data.container3.title}</h2>
               <p>{data.container3.desc}</p>
-              <ul className="rbt-list-style-2-new flex-wrap">
+              <ul className="rbt-list-style-2-new flex-wrap g-1">
                 {data.container3.subContent.map((innerData, i) => (
                   <li key={i} className="flex ">
                     <i className="feather-check"></i>
