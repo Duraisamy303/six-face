@@ -2,120 +2,94 @@ import Image from "next/image";
 import React from "react";
 import CourseSlider from "./CourseSlider";
 
-export default function SingleCourseProp({ courseData, image }) {
+export default function SingleCourseProp({ courseData, image, data }) {
+  console.log("data: ", data);
   return (
     <>
       <div className="col-lg-12">
-        {courseData.map((data, index) => (
-          <div className="modern-course-features-box h-100" key={index}>
-            {data.certificateOne.map((innerData, innerIndex) => (
-              <div className="inner" key={innerIndex}>
-                <div className="thumbnail">
-                  <Image
-                    src={image ? innerData.img : innerData.imgTwo}
-                    width={604}
-                    height={408}
-                    alt="Image"
-                  />
-                </div>
-                <div className="content">
-                  <span className="rbt-badge-6 bg-secondary-opacity">
-                    {innerData.tag}
-                  </span>
-                  <h2 className="title mt--10">{innerData.title}</h2>
-                  <p>{innerData.desc}</p>
-                  <ul className="course-feature-list">
-                    {innerData.list.map((list, i) => (
-                      <li key={i}>
-                        <div className="icon">
-                          <Image
-                            src={list.icon}
-                            width={40}
-                            height={40}
-                            alt="Icon Image"
-                          />
-                        </div>
-                        <div className="feature-content">
-                          <h4 className="featute-title">
-                            {list.num}K+ <span>{list.text}</span>
-                          </h4>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      <div className="col-lg-6">
-        {courseData.map((data, index) => (
-          <div
-            className="modern-course-features-box one-colume-grid h-100"
-            key={index}
-          >
-            {data.certificateTwo.map((innerData, innerIndex) => (
-              <div className="inner" key={innerIndex}>
-                <div className="thumbnail">
-                  <Image
-                    src={image ? innerData.img : innerData.imgTwo}
-                    width={558}
-                    height={397}
-                    alt="Image"
-                  />
-                </div>
-                <div className="content">
-                  <h2 className="title">{innerData.title}</h2>
-                  <p>{innerData.desc}</p>
-                  <ul className="course-feature-list">
-                    {innerData.list.map((list, i) => (
-                      <li key={i}>
-                        <div className="icon">
-                          <Image
-                            src={list.icon}
-                            width={40}
-                            height={40}
-                            alt="Icon Image"
-                          />
-                        </div>
-                        <div className="feature-content">
-                          <h4 className="featute-title">
-                            {list.num}K+ <span>{list.text}</span>
-                          </h4>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      <div className="col-lg-6">
-        <div className="modern-course-features-box grid-content-reverse h-100">
-          {courseData.map((data, index) => (
-            <div className="inner" key={index}>
-              <CourseSlider {...data} course={data.courseImg} />
-              {data.certificateThree.map((innerData, innerIndex) => (
-                <div className="content" key={innerIndex}>
-                  <h2 className="title">{innerData.title}</h2>
-                  <p>{innerData.desc}</p>
-                  <ul className="rbt-list-style-2 flex-wrap">
-                    {innerData.list.map((innerData, i) => (
-                      <li key={i}>
-                        <i className="feather-check"></i>
-                        {innerData.text}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+        {/* {data.map((data, index) => ( */}
+        <div className="modern-course-features-box-new h-100">
+          <div className="inner">
+            <div className="thumbnail">
+              <Image
+                src={data.container1?.img}
+                width={604}
+                height={408}
+                alt="Image"
+              />
             </div>
-          ))}
+            <div className="content">
+              <h2 className="title ">{data.container1.title}</h2>
+              <p>{data.container1.desc}</p>
+              <ul className="course-feature-list ">
+                {data?.container1?.imgs?.map((list, i) => (
+                  <li key={i}>
+                    <div className="flex flex-start">
+                      <Image
+                        src={list}
+                        width={120}
+                        height={120}
+                        alt="Icon Image"
+                      />
+                    </div>
+                    {/* <div className="feature-content">
+                          <h4 className="featute-title">
+                            {list.num}K+ <span>{list.text}</span>
+                          </h4>
+                        </div>  */}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* ))} */}
+      </div>
+
+      <div className="col-lg-6">
+        <div className="modern-course-features-box-new one-colume-grid h-80">
+          <div className="inner">
+            <div className="thumbnail">
+              <Image
+                src={data?.container2?.img}
+                width={558}
+                height={397}
+                alt="Image"
+              />
+            </div>
+            <div className="content">
+              <h2 className="title">{data?.container2.title}</h2>
+              <p>{data?.container2.desc}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-6">
+        <div className="modern-course-features-box-new grid-content-reverse h-60">
+          <div className="inner">
+           <div className="thumbnail"> 
+              <Image
+                src={data?.container3?.img}
+                width={308}
+                height={197}
+                alt="Image"
+              />
+          </div>  
+            {/* <CourseSlider {...data.container3} course={data.container3.img} /> */}
+            <div className="content">
+              <h2 className="title">{data.container3.title}</h2>
+              <p>{data.container3.desc}</p>
+              <ul className="rbt-list-style-2 flex-wrap">
+                {data.container3.subContent.map((innerData, i) => (
+                  <li key={i} className="flex ">
+                    <i className="feather-check"></i>
+                    <p>{innerData.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>

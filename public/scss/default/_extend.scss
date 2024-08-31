@@ -185,6 +185,10 @@
     background-color: var(--color-darker) !important;
 }
 
+.bg-color-green {
+    background-color: #37A282 !important;
+}
+
 .bg-color-black {
     background-color: var(--color-black) !important;
 }
@@ -408,6 +412,10 @@
     background: linear-gradient(151.71deg, #30C4FF 0%, #7259FF 100%) !important;
 }
 
+.bg-grey {
+    background: #F3F7FF !important;
+}
+
 
 .theme-mainbg-gradient {
     background-color: var(--color-light);
@@ -432,6 +440,12 @@
 .bg-secondary-opacity {
     background: var(--secondary-opacity) !important;
     color: var(--color-secondary) !important;
+}
+
+
+.bg-secondary-opacity-new {
+    background: #50AE91 !important;
+    color: white !important;
 }
 
 .bg-coral-opacity {

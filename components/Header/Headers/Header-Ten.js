@@ -51,7 +51,7 @@ const HeaderTen = ({
   return (
     <>
       <div
-      style={{backgroundColor:"yellow"}}
+      style={{backgroundColor:"#4E4994"}}
         className={`rbt-header-wrapper  rbt-header-wrapper height-50 ${gapSpaceBetween} ${sticky}  ${
           !headerType && isSticky ? `${headerSticky}` : ""
         }`}

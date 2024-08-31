@@ -62,7 +62,28 @@
               "icon": "/images/icons/card-icon-2.png",
               "num": 300,
               "text": "Month Required"
+            },
+            {
+              "icon": "/images/icons/card-icon-4.png",
+              "num": 10,
+              "text": "Enrolled"
+            },
+            {
+              "icon": "/images/icons/card-icon-2.png",
+              "num": 300,
+              "text": "Month Required"
+            },
+            {
+              "icon": "/images/icons/card-icon-4.png",
+              "num": 10,
+              "text": "Enrolled"
+            },
+            {
+              "icon": "/images/icons/card-icon-2.png",
+              "num": 300,
+              "text": "Month Required"
             }
+
           ]
         }
       ],

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "../../public/images/logo/logo.png";
+import logo from "../../public/images/logo/header-logo.png";
+
 import logoLight from "../../public/images/dark/logo/logo-light.png";
 
 import FooterData from "../../data/footer.json";
@@ -13,7 +14,7 @@ const FooterThree = () => {
   const { isLightTheme } = useAppContext();
   return (
     <>
-      <footer className="rbt-footer footer-style-1">
+      <footer className="rbt-footer footer-style-1 ">
         <div className="footer-top">
           <div className="container">
             {FooterData &&
@@ -33,7 +34,7 @@ const FooterThree = () => {
                             />
                           ) : (
                             <Image
-                              src={logoLight}
+                              src={logo}
                               width={152}
                               height={50}
                               priority={true}
@@ -66,13 +67,18 @@ const FooterThree = () => {
 
                   <SingleFooter
                     classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30"
-                    title="Useful Links"
+                    title="Quick Links"
                     footerType={footer.usefulLinks}
                   />
+                   {/* <SingleFooter
+                    classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30"
+                    title="Our Companies"
+                    footerType={footer.usefulLinks}
+                  /> */}
 
                   <SingleFooter
-                    classOne="col-lg-2 col-md-6 col-sm-6 col-12 mt--30"
-                    title="Our Company"
+                    classOne="col-lg-2 col-md-6 col-sm-6 col-12 mt--55"
+                    title=""
                     footerType={footer.ourCompany}
                   />
 

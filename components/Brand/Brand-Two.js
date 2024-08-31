@@ -3,20 +3,22 @@ import Link from "next/link";
 
 import BrandData from "../../data/elements/brands.json";
 
-const BrandTwo = () => {
+const BrandTwo = ({data}) => {
+
+ 
   return (
     <div className="container">
-      <div className="row align-items-center">
+      <div className="row ">
         <div className="col-lg-12">
-          <ul className="brand-list brand-style-1">
-            {BrandData &&
-              BrandData.brandTwo.map((data, index) => (
+          <ul className="brand-list brand-style-1-new">
+            {data &&
+              data.map((data, index) => (
                 <li key={index}>
                   <Link href="#">
                     <Image
-                      src={data.img}
-                      width={data.width}
-                      height={data.height}
+                      src={data}
+                      width={200}
+                      height={200}
                       priority={true}
                       alt="Brand Image"
                     />

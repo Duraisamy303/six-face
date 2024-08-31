@@ -2,107 +2,146 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Navigation, Pagination } from "swiper/modules";
 
 import TeamData from "../../data/elements/team.json";
-import TeamHead from "./TeamHead";
 
 const TeamEight = ({ head }) => {
   return (
     <>
       <div className="container">
-        {head === undefined ? (
-          <TeamHead
-            title="Team (Carousel Style)."
-            desc="Awesome Carousel Style."
-          />
-        ) : (
-          ""
-        )}
-
-        <div className="row row--15">
+        <div className="row row--15 mt--20">
           <div className="col-lg-12">
-            <Swiper
-              className="swiper team-slide-activation rbt-arrow-between rbt-dot-bottom-center"
-              modules={[Navigation, Pagination]}
-              loop={true}
-              spaceBetween={30}
-              slidesPerView={1}
-              pagination={{
-                el: ".rbt-swiper-pagination",
-                clickable: true,
-              }}
-              navigation={{
-                nextEl: ".rbt-arrow-left",
-                prevEl: ".rbt-arrow-right",
-              }}
-              breakpoints={{
-                575: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                992: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              {TeamData &&
-                TeamData.team.slice(0, 8).map((data, index) => (
-                  <SwiperSlide className="swiper-wrapper" key={index}>
-                    {data.details.map((item, innerIndex) => (
-                      <div className="swiper-slide" key={innerIndex}>
-                        <div className="team team-style--bottom variation-2">
-                          <div className="thumbnail">
-                            <Link href="#">
-                              <Image
-                                src={item.img}
-                                width={415}
-                                height={555}
-                                priority
-                                alt="Blog Images"
-                              />
-                            </Link>
-                          </div>
-                          <div className="content">
-                            <div className="inner">
-                              <h4 className="title">
-                                <Link href="#">{item.name}</Link>
-                              </h4>
-                              <p className="designation">{item.type}</p>
-                            </div>
-                            <div className="icon-right">
+            <div style={{ position: "relative" }}>
+              <Swiper
+                className="swiper team-slide-activation rbt-dot-bottom-center"
+                modules={[Navigation]}
+                loop={true}
+                spaceBetween={0}
+                slidesPerView={1}
+                pagination={{
+                  el: ".rbt-swiper-pagination",
+                  clickable: true,
+                }}
+                navigation={{
+                  nextEl: ".rbt-arrow-right",
+                  prevEl: ".rbt-arrow-left",
+                }}
+                breakpoints={{
+                  575: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  992: {
+                    slidesPerView: 4,
+                  },
+                }}
+              >
+                {TeamData &&
+                  TeamData.team.slice(0, 8).map((data, index) => (
+                    <SwiperSlide key={index}>
+                      {data.details.map((item, innerIndex) => (
+                        <div
+                          className="swiper-slide"
+                          key={innerIndex}
+                          style={{
+                            border: "1px solid #ddd",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            padding: "10px",
+                            boxSizing: "border-box",
+                          }}
+                        >
+                          <div className="team team-style--bottom variation-2">
+                            <div className="thumbnail">
                               <Link href="#">
-                                <i className="feather-arrow-right"></i>
+                                <Image
+                                  src={item.img}
+                                  width={415}
+                                  height={555}
+                                  priority
+                                  alt="Team Image"
+                                  style={{
+                                    width: "100px", // Smaller size for the image
+                                    height: "auto",
+                                  }}
+                                />
                               </Link>
+                            </div>
+                            <div className="content">
+                              <div className="inner">
+                                <h4 className="title">
+                                  <Link href="#">{item.name}</Link>
+                                </h4>
+                                <p className="designation">{item.type}</p>
+                              </div>
+                              <div className="icon-right">
+                                <Link href="#">
+                                  <i className="feather-arrow-right"></i>
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </SwiperSlide>
-                ))}
-              <div className="rbt-swiper-arrow rbt-arrow-left">
-                <div className="custom-overfolow">
-                  <i className="rbt-icon feather-arrow-left"></i>
-                  <i className="rbt-icon-top feather-arrow-left"></i>
-                </div>
-              </div>
+                      ))}
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
 
-              <div className="rbt-swiper-arrow rbt-arrow-right">
-                <div className="custom-overfolow">
-                  <i className="rbt-icon feather-arrow-right"></i>
-                  <i className="rbt-icon-top feather-arrow-right"></i>
-                </div>
-              </div>
-
+              {/* Left Arrow */}
               <div
-                className="rbt-swiper-pagination"
-                style={{ bottom: "0" }}
-              ></div>
-            </Swiper>
+                className="rbt-swiper-arrow rbt-arrow-left"
+                style={{
+                  position: "absolute",
+                  left: "-50px", // Increased space from the box
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  zIndex: 10,
+                  width: "40px", // Width of the round arrow box
+                  height: "40px", // Height of the round arrow box
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "red", // Red background color
+                  borderRadius: "50%", // Round shape
+                  color: "white", // White icon color
+                  border: "none", // Remove border
+                }}
+              >
+                <i className="rbt-icon feather-arrow-left"></i>
+              </div>
+
+              {/* Right Arrow */}
+              <div
+                className="rbt-swiper-arrow rbt-arrow-right"
+                style={{
+                  position: "absolute",
+                  right: "-50px", // Increased space from the box
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  zIndex: 10,
+                  width: "40px", // Width of the round arrow box
+                  height: "40px", // Height of the round arrow box
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "red", // Red background color
+                  borderRadius: "50%", // Round shape
+                  color: "white", // White icon color
+                  border: "none", // Remove border
+                }}
+              >
+                <i className="rbt-icon feather-arrow-right"></i>
+              </div>
+            </div>
+
+            <div
+              className="rbt-swiper-pagination"
+              style={{ bottom: "0", position: "relative" }}
+            ></div>
           </div>
         </div>
       </div>

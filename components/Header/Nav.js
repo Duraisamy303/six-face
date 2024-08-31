@@ -27,7 +27,7 @@ const Nav = () => {
       <ul className="mainmenu">
         <li className="with-megamenu has-menu-child-item position-static">
           <Link
-            className={`${activeMenuItem === "home" ? "open" : ""}`}
+            className={`${activeMenuItem === "home" ? "open" : ""} color-white`}
             onClick={() => toggleMenuItem("home")}
             href="#"
           >
@@ -106,7 +106,7 @@ const Nav = () => {
 
         <li className="with-megamenu has-menu-child-item">
           <Link
-            className={`${activeMenuItem === "courses" ? "open" : ""}`}
+            className={`${activeMenuItem === "courses" ? "open" : ""} color-white`}
             href="#"
             onClick={() => toggleMenuItem("courses")}
           >
@@ -185,7 +185,7 @@ const Nav = () => {
         </li>
         <li className="has-dropdown has-menu-child-item">
           <Link
-            className={`${activeMenuItem === "dashboard" ? "open" : ""}`}
+            className={`${activeMenuItem === "dashboard" ? "open" : ""} color-white`}
             href="#"
             onClick={() => toggleMenuItem("dashboard")}
           >
@@ -225,7 +225,7 @@ const Nav = () => {
         <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
-            className={`${activeMenuItem === "pages" ? "open" : ""}`}
+            className={`${activeMenuItem === "pages" ? "open" : ""} color-white`}
             onClick={() => toggleMenuItem("pages")}
           >
             Coporate
@@ -300,7 +300,7 @@ const Nav = () => {
         <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
-            className={`${activeMenuItem === "elements" ? "open" : ""}`}
+            className={`${activeMenuItem === "elements" ? "open" : ""} color-white`}
             onClick={() => toggleMenuItem("elements")}
           >
             Newsroom
@@ -358,7 +358,7 @@ const Nav = () => {
         <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
-            className={`${activeMenuItem === "blog" ? "open" : ""}`}
+            className={`${activeMenuItem === "blog" ? "open" : ""} color-white`}
             onClick={() => toggleMenuItem("blog")}
           >
             Careers

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Select from "react-select";
 import { useAppContext } from "@/context/Context";
 
-import logo from "../../../public/images/logo/logo.png";
+import logo from "../../../public/images/logo/header-logo.png";
 import logoLight from "../../../public/images/dark/logo/logo-light.png";
 import User from "../Offcanvas/User";
 
@@ -57,7 +57,7 @@ const HeaderMidOne = ({
                         />
                       ) : (
                         <Image
-                          src={logoLight}
+                          src={logo}
                           width={152}
                           height={50}
                           priority={true}

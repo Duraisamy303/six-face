@@ -11,15 +11,16 @@ const Odometer = dynamic(() => import("react-odometerjs"), {
   loading: () => <span>00</span>,
 });
 
-const Counter = ({ isDesc, head }) => {
-  const { values } = useFetch(CounterData, "counterOne");
+const Counter = ({ isDesc, head,data }) => {
+  console.log("data: ", data);
+  const { values } = useFetch(data, "counterOne");
 
   return (
     <>
-      {CounterData &&
-        CounterData.counterOne.map((data, index) => (
+      {data &&
+        data.counterOne?.map((data, index) => (
           <div className="container" key={index}>
-            {head === undefined ? (
+            {/* {head === undefined ? (
               <CounterHead
                 bgClass="bg-primary-opacity"
                 mb="mb--40"
@@ -30,9 +31,9 @@ const Counter = ({ isDesc, head }) => {
               />
             ) : (
               ""
-            )}
+            )} */}
             <div className="row g-5 hanger-line">
-              {data.body.map((item, innerIndex) => (
+              {data?.body?.map((item, innerIndex) => (
                 <div
                   className={`${
                     item.top
@@ -44,14 +45,14 @@ const Counter = ({ isDesc, head }) => {
                   <div className="rbt-counterup rbt-hover-03 border-bottom-gradient">
                     <div className="top-circle-shape"></div>
                     <div className="inner">
-                      <div className="rbt-round-icon">
+                      {/* <div className="rbt-round-icon">
                         <Image
                           src={item.img}
                           width={50}
                           height={50}
                           alt="Icons Images"
                         />
-                      </div>
+                      </div> */}
                       <div className="content">
                         <h3 className="counter">
                           <span className="odometer">
