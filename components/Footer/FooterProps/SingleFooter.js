@@ -6,7 +6,7 @@ const SingleFooter = ({ classOne, title, footerType }) => {
   return (
     <div className={classOne}>
       <div className="footer-widget">
-        <h5 className="ft-title">{title}</h5>
+        <h5 className="ft-title-new">{title}</h5>
         <ul className="ft-link">
           {footerType.map((value, innerIndex) => (
             <li key={innerIndex}>

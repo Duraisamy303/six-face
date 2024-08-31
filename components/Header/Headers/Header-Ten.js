@@ -8,7 +8,7 @@ import Nav from "../Nav";
 import User from "../Offcanvas/User";
 import SearchWithCategory from "../Category/SearchWithCategory";
 
-import logo from "../../../public/images/logo/logo.png";
+import logo from "../../../public/images/logo/header-logo.png";
 import logoLight from "../../../public/images/dark/logo/logo-light.png";
 
 const HeaderTen = ({
@@ -69,13 +69,13 @@ const HeaderTen = ({
                       href="#"
                       onClick={() => setSearch(!search)}
                     >
-                      <i className="feather-search"></i>
+                      <i className="feather-search color-white"></i>
                     </Link>
                   </li>
 
                   <li className="access-icon">
                     <Link className="rbt-round-btn" href="wishlist.html">
-                      <i className="feather-heart"></i>
+                      <i className="feather-heart color-white"></i>
                     </Link>
                   </li>
                 </ul>
@@ -115,17 +115,17 @@ const HeaderTen = ({
                 <ul className="quick-access">
                   <li className="access-icon rbt-mini-cart">
                     <Link
-                      className="rbt-cart-sidenav-activation rbt-round-btn"
+                      className="rbt-cart-sidenav-activation rbt-round-btn "
                       href="#"
                       onClick={() => setCart(!cartToggle)}
                     >
-                      <i className="feather-shopping-cart"></i>
+                      <i className="feather-shopping-cart color-white"></i>
                       <span className="rbt-cart-count">{total_items}</span>
                     </Link>
                   </li>
                   <li className="access-icon rbt-user-wrapper right-align-dropdown">
                     <Link className="rbt-round-btn" href="#">
-                      <i className="feather-user"></i>
+                      <i className="feather-user color-white"></i>
                     </Link>
                     <User />
                   </li>
@@ -138,7 +138,7 @@ const HeaderTen = ({
                     className="hamberger-button rbt-round-btn ms-auto"
                     onClick={() => setMobile(!mobile)}
                   >
-                    <i className="feather-menu"></i>
+                    <i className="feather-menu color-white"></i>
                   </button>
                 </div>
               </div>

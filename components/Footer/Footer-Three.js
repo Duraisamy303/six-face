@@ -44,11 +44,11 @@ const FooterThree = () => {
                         </Link>
                       </div>
 
-                      <p className="description mt--20">{footer.description}</p>
+                      <p className="description mt--20 color-white">{footer.description}</p>
 
                       <div className="contact-btn mt--30">
                         <Link
-                          className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
+                          className="rbt-btn-new hover-icon-reverse  radius-round"
                           href="#"
                         >
                           <div className="icon-reverse-wrapper">
@@ -84,7 +84,7 @@ const FooterThree = () => {
 
                   <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt--30">
                     <div className="footer-widget">
-                      <h5 className="ft-title">Get Contact</h5>
+                      <h5 className="ft-title-new">Get Contact</h5>
                       <ul className="ft-link">
                         <li>
                           <span>Phone:</span>{" "}
@@ -104,7 +104,7 @@ const FooterThree = () => {
                         {footer.socialLink.map((value, innerIndex) => (
                           <li key={innerIndex}>
                             <Link href={value.link}>
-                              <i className={value.icon}></i>
+                              <i className={`${value.icon} color-white`}></i>
                             </Link>
                           </li>
                         ))}

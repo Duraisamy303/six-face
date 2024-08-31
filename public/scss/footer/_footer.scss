@@ -21,6 +21,13 @@
             font-size: 18px;
         }
     }
+    .ft-title-new {
+        color: white;
+        margin-bottom: 20px;
+        @media #{$lg-layout} {
+            font-size: 18px;
+        }
+    }
     .description {
         font-size: 16px;
         line-height: 25px;
@@ -60,14 +67,14 @@
         @extend %liststyle;
         li {
             margin: 0;
-            color: var(--color-body);
+            color: white;
             font-size: 16px;
             line-height: 25px;
             span {
                 font-weight: 500;
             }
             a {
-                color: var(--color-body);
+                color: white;
                 display: inline-block;
                 position: relative;
                 &:after {

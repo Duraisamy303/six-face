@@ -66,21 +66,21 @@ export default function SingleCourseProp({ courseData, image, data }) {
       </div>
 
       <div className="col-lg-6">
-        <div className="modern-course-features-box-new grid-content-reverse h-60">
+        <div className="modern-course-features-box-new grid-content-reverse ">
           <div className="inner">
-           <div className="thumbnail"> 
+            <div className="thumbnail">
               <Image
                 src={data?.container3?.img}
                 width={308}
                 height={197}
                 alt="Image"
               />
-          </div>  
+            </div>
             {/* <CourseSlider {...data.container3} course={data.container3.img} /> */}
             <div className="content">
               <h2 className="title">{data.container3.title}</h2>
               <p>{data.container3.desc}</p>
-              <ul className="rbt-list-style-2 flex-wrap">
+              <ul className="rbt-list-style-2-new flex-wrap">
                 {data.container3.subContent.map((innerData, i) => (
                   <li key={i} className="flex ">
                     <i className="feather-check"></i>

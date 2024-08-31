@@ -6,15 +6,16 @@ import { Navigation, Pagination } from "swiper/modules";
 
 import TeamData from "../../data/elements/team.json";
 
-const TeamEight = ({ head }) => {
+const TeamEight = ({ head ,data}) => {
+  console.log("data: ", data);
   return (
     <>
       <div className="container">
         <div className="row row--15 mt--20">
-          <div className="col-lg-12">
+          <div className="col-lg-12 pr--60 pl--60">
             <div style={{ position: "relative" }}>
               <Swiper
-                className="swiper team-slide-activation rbt-dot-bottom-center"
+                className="swiper team-slide-activation pl--50 pr--50"
                 modules={[Navigation]}
                 loop={true}
                 spaceBetween={0}
@@ -39,13 +40,13 @@ const TeamEight = ({ head }) => {
                   },
                 }}
               >
-                {TeamData &&
-                  TeamData.team.slice(0, 8).map((data, index) => (
+                {data &&
+                  data.map((data, index) => (
                     <SwiperSlide key={index}>
-                      {data.details.map((item, innerIndex) => (
+                      {/* {data.map((item, innerIndex) => ( */}
                         <div
                           className="swiper-slide"
-                          key={innerIndex}
+                          key={index}
                           style={{
                             border: "1px solid #ddd",
                             display: "flex",
@@ -53,15 +54,17 @@ const TeamEight = ({ head }) => {
                             alignItems: "center",
                             padding: "10px",
                             boxSizing: "border-box",
+                            height:150,
+                            justifyContent:"center"
                           }}
                         >
-                          <div className="team team-style--bottom variation-2">
+                          <div className="">
                             <div className="thumbnail">
                               <Link href="#">
                                 <Image
-                                  src={item.img}
-                                  width={415}
-                                  height={555}
+                                  src={data}
+                                  width={"100%"}
+                                  height={"100%"}
                                   priority
                                   alt="Team Image"
                                   style={{
@@ -71,7 +74,7 @@ const TeamEight = ({ head }) => {
                                 />
                               </Link>
                             </div>
-                            <div className="content">
+                            {/* <div className="content">
                               <div className="inner">
                                 <h4 className="title">
                                   <Link href="#">{item.name}</Link>
@@ -83,10 +86,10 @@ const TeamEight = ({ head }) => {
                                   <i className="feather-arrow-right"></i>
                                 </Link>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
-                      ))}
+                      {/* ))} */}
                     </SwiperSlide>
                   ))}
               </Swiper>
@@ -105,7 +108,7 @@ const TeamEight = ({ head }) => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: "red", // Red background color
+                  background: "#4E4994", // Red background color
                   borderRadius: "50%", // Round shape
                   color: "white", // White icon color
                   border: "none", // Remove border
@@ -128,7 +131,7 @@ const TeamEight = ({ head }) => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: "red", // Red background color
+                  background: "#4E4994", // Red background color
                   borderRadius: "50%", // Round shape
                   color: "white", // White icon color
                   border: "none", // Remove border

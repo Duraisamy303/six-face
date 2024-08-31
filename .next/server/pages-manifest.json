@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/06-university-status": "pages/06-university-status.js",
-  "/12-marketplace": "pages/12-marketplace.js"
+  "/12-marketplace": "pages/12-marketplace.js",
+  "/06-university-status": "pages/06-university-status.js"
 }

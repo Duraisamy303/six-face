@@ -112,7 +112,11 @@ import com_44 from "../../public/images/companies/17.png";
 import com_45 from "../../public/images/companies/18.png";
 import com_46 from "../../public/images/companies/14.png";
 import com_47 from "../../public/images/companies/12.png";
-// import com_47 from "../../public/images/companies/47.png";
+
+import aca_1 from "../../public/images/scroll/log-1.png";
+import aca_2 from "../../public/images/scroll/log-2.png";
+import aca_3 from "../../public/images/scroll/log-3.png";
+import aca_4 from "../../public/images/scroll/log-4.png";
 
 const LanguageAcademy = () => {
   let getAllCourse = JSON.parse(JSON.stringify(CourseDetails.languageAcademy));
@@ -306,6 +310,8 @@ const LanguageAcademy = () => {
     com_46,
     com_47,
   ];
+
+  const academic = [aca_1, aca_2, aca_3, aca_4];
   return (
     <>
       <div className="rbt-banner-area rbt-banner-7 bg-gradient-1 theme-shape header-transperent-spacer">
@@ -529,7 +535,7 @@ const LanguageAcademy = () => {
         </div>
       </div>
       <div className=" bg-grey rbt-section-gap-own">
-        <TeamEight head={false} />
+        <TeamEight head={false} data={academic} />
       </div>
       <div>
         <div className="container">
@@ -549,7 +555,7 @@ const LanguageAcademy = () => {
               </div>
             </div>
           </div>
-          <BrandTwo data={companies}/>
+          <BrandTwo data={companies} />
         </div>
       </div>
 
